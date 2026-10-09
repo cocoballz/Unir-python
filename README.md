@@ -1,0 +1,63 @@
+# Trabajo 1: Sintaxis Python
+
+## Descripción
+
+Se desarrolló una calculadora de promedios escolares en el archivo `calculadora_promedios.py`. El programa permite ingresar materias y sus calificaciones, calcular el promedio general y mostrar un resumen de los resultados.
+
+La solución utiliza programación estructurada: variables, operadores, condicionales, ciclos, listas y funciones. No utiliza clases ni programación orientada a objetos.
+
+## Funciones implementadas
+
+| Función | Qué hace |
+| --- | --- |
+| `ingresar_calificaciones()` | Solicita el nombre de cada materia y una nota entre 0 y 10. Guarda los nombres y las notas en dos listas separadas y devuelve ambas listas. |
+| `calcular_promedio(calificaciones)` | Suma las notas y divide el resultado entre la cantidad de calificaciones. Si la lista está vacía, devuelve `0.0`. |
+| `determinar_estado(calificaciones, umbral=5.0)` | Devuelve dos listas de índices: una de materias aprobadas y otra de reprobadas. Las notas iguales o superiores al umbral se consideran aprobadas. |
+| `encontrar_extremos(calificaciones)` | Devuelve el índice de la nota más alta y el de la más baja. En caso de empate, selecciona la primera aparición. Si no hay notas, devuelve `(None, None)`. |
+| `main()` | Coordina la entrada de datos, llama a las funciones y muestra el resumen y la despedida. |
+
+## Organización de los datos
+
+Las materias y las calificaciones se almacenan en listas relacionadas por su posición. Por ejemplo:
+
+```python
+materias = ["Matemáticas", "Historia"]
+calificaciones = [10.0, 4.0]
+```
+
+La posición `0` corresponde a Matemáticas y su nota de `10.0`; la posición `1`, a Historia y su nota de `4.0`. Los índices devueltos por las funciones permiten recuperar el nombre y la nota de cada materia.
+
+## Validaciones y casos especiales
+
+- Si la calificación no es un número, el programa muestra un mensaje y vuelve a solicitarla.
+- Si la nota está fuera del intervalo de 0 a 10, se solicita nuevamente. También se rechazan valores como `nan` e `inf`.
+- Las calificaciones decimales se escriben con punto, por ejemplo, `7.5`.
+- La pregunta para continuar acepta `s`, `si`, `sí`, `n` o `no`, sin distinguir mayúsculas de minúsculas. Otras respuestas se solicitan nuevamente.
+- Pulsar Enter sin escribir un nombre de materia termina la entrada de datos.
+- Si no se ingresa ninguna materia, se informa al usuario y se muestra la despedida sin intentar calcular el resumen.
+- Si no hay materias aprobadas o reprobadas, el apartado correspondiente muestra `Ninguna.`.
+
+## Cómo ejecutar el programa
+
+Se necesita Python 3. Abre una terminal en la carpeta del proyecto y ejecuta:
+
+```powershell
+python calculadora_promedios.py
+```
+
+1. Escribe el nombre de la materia.
+2. Introduce una calificación entre 0 y 10.
+3. Responde `s` para agregar otra materia o `n` para finalizar.
+4. Consulta el resumen final.
+
+La estructura `if __name__ == "__main__":` llama a `main()` cuando se ejecuta el archivo directamente.
+
+## Información del resumen
+
+El programa muestra todas las materias con sus notas, el promedio general, el umbral de aprobación, las materias aprobadas y reprobadas, y las materias con mejor y peor calificación. Las notas se presentan con dos decimales.
+
+Por ejemplo, al ingresar Matemáticas con `10` e Historia con `4`, el promedio es `7.00`. Matemáticas queda aprobada e Historia reprobada; también son las materias con mayor y menor nota, respectivamente.
+
+## Verificación realizada
+
+Se verificaron los cálculos de promedio, la clasificación con el umbral predeterminado y con uno personalizado, la identificación de extremos y el comportamiento ante empates y listas vacías. También se comprobó la entrada de datos con valores inválidos, el resumen con varias materias y la salida cuando no se ingresa ninguna.
