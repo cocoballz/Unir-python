@@ -1,0 +1,4 @@
+Trabajo 1: funciones, listas, límites, errores, empates, vacío y resumen: OK.
+Trabajo 2: clases, actualizaciones, tipos, búsqueda, totales y cinco opciones: OK.
+Trabajo 3: script y siete celdas, limpieza, totales, rotación, estadísticas y semilla: OK.
+Trabajo 4: carga, fechas, limpieza, seis subplots y matrices de ambas bibliotecas: OK.

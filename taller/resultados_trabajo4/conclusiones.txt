@@ -1,0 +1,32 @@
+TRABAJO 4: CONCLUSIONES DE LAS VISUALIZACIONES
+
+Registros válidos analizados: 4246.
+Período observado: 02/01/2012 a 12/12/2012.
+Ventas totales: 1,006,427.18. Beneficio total: 117,606.91.
+El CSV no especifica la moneda. Cada fila es un registro de venta, no necesariamente un pedido completo.
+
+1. Histograma: media de ventas 237.03 y mediana 82.53.
+La media superior a la mediana muestra asimetría hacia ventas grandes; la mayoría de registros tiene importes menores.
+
+2. Boxplot: medianas de beneficio por categoría:
+Category
+Furniture          15.92
+Office Supplies     6.00
+Technology         30.52
+Las cajas y los puntos permiten comparar dispersión y extremos. Los valores negativos se conservan porque son pérdidas.
+
+3. Dispersión: 1077 registros (25.37%) tienen pérdidas.
+La relación ventas-beneficios tiene correlación 0.477; se observan ventas con beneficio negativo.
+Conviene revisar precios, descuentos y costes en esos registros; el gráfico no establece causas.
+
+4. Línea mensual: el mayor total observado corresponde a 2012-11, con 134,597.00 en ventas.
+Los extremos del período pueden representar meses incompletos. Este histórico no demuestra un patrón estacional repetido.
+
+5. Barras agrupadas: la combinación con más ventas es Technology / Consumer, con 212,424.48.
+Los totales ayudan a identificar dónde se concentra el volumen comercial; no indican gasto medio por cliente.
+
+6. Heatmap: correlación descuento-beneficio -0.363 y ventas-coste de envío 0.814.
+Las relaciones son descriptivas y lineales, sensibles a extremos; correlación no implica causalidad.
+
+Preparación: conversión numérica y de fechas día/mes/año, validación de rangos y eliminación de nulos solo en columnas del análisis.
+Los códigos postales ausentes no provocan la pérdida de filas. Los datos originales no se modifican.
